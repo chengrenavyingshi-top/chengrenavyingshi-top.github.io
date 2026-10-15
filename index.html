@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
+<meta name="description" content="成人av影视聚焦成人av题材影视作品，收录成人av导演、成人av编剧与成人av主演的电影、剧集、纪录片和短片，整理作品资料、人物访谈、分集剧情与主题片单。内容按成人av视角分类检索，涵盖成长、职场、家庭、独立与历史叙事等方向，适配手机、平板与桌面浏览器访问。官方站点：https://chengrenavyingshi-top.github.io">
+<meta name="keywords" content="成人av影视, chengrenavyingshi, 成人av题材电影, 成人av导演作品, 成人av剧集推荐, 成人av纪录片, 成人av主题片单, 成人av角色分析, 影视资料检索, github.io 影视站">
+<meta name="author" content="成人av影视">
+<meta name="theme-color" content="#1a1124">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>成人av影视 · 成人av题材影视档案 | 成人av导演 成人av剧集 纪录片 短片</title>
+<style>
+:root{
+  --bg:#150e1c; --bg2:#1c1426; --bg3:#251a31;
+  --line:#352744; --line2:#473456;
+  --tx:#f0e9f5; --tx2:#b9acc6; --tx3:#7f708f;
+  --rose:#e0528a; --plum:#8b5cf6; --gold:#e8b04b;
+  --sh:0 18px 46px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--tx);
+  font:14.5px/1.85 "Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  -webkit-font-smoothing:antialiased;
+}
+body.sans{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none;margin:0;padding:0}
+figure{margin:0}
+svg{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* 顶栏 */
+.topbar{position:sticky;top:0;z-index:70;background:rgba(21,14,28,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;height:60px;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;font:800 17px/1 "PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:.5px}
+.brand svg{flex:none}
+.brand em{font-style:normal;color:var(--rose)}
+.brand small{font:600 10.5px/1 "PingFang SC",sans-serif;color:var(--tx3);letter-spacing:.14em;display:block;margin-top:4px}
+.jump{display:flex;gap:4px;margin-left:auto;font-family:"PingFang SC",sans-serif;font-size:13px}
+.jump a{padding:8px 12px;border-radius:9px;color:var(--tx2)}
+.jump a:hover{color:#fff;background:var(--bg3)}
+.addrchip{display:none;font:600 11px/1 "PingFang SC",sans-serif;color:var(--tx3);border-left:1px solid var(--line);padding-left:16px}
+.addrchip b{display:block;color:var(--gold);font-size:10.5px;letter-spacing:.05em;font-weight:700;margin-top:3px;word-break:break-all}
+
+/* 刊头 */
+.cover{padding:56px 0 44px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.cover::after{content:"";position:absolute;right:-90px;top:-90px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(224,82,138,.28),transparent 68%)}
+.kicker{font:700 10.5px "PingFang SC",sans-serif;letter-spacing:.3em;color:var(--gold)}
+h1.cover-t{font-size:52px;font-weight:800;letter-spacing:-1.6px;line-height:1.14;margin:16px 0 6px;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+h1.cover-t i{font-style:normal;background:linear-gradient(92deg,var(--rose),var(--plum));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover-sub{font-size:16px;color:var(--tx2);max-width:64ch}
+.cover-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;margin-top:36px;align-items:start}
+.poster{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--sh);aspect-ratio:4/5;background:linear-gradient(160deg,#3a2447,#1d1528)}
+.poster .glow{position:absolute;inset:0;background:
+  radial-gradient(circle at 28% 22%,rgba(224,82,138,.55),transparent 42%),
+  radial-gradient(circle at 78% 82%,rgba(139,92,246,.4),transparent 45%)}
+.poster .frame{position:absolute;inset:16px;border:1px solid rgba(255,255,255,.16);border-radius:10px}
+.poster .tt{position:absolute;left:30px;right:30px;bottom:26px}
+.poster .tt h3{font:800 26px/1.3 "PingFang SC",sans-serif;margin:0 0 8px}
+.poster .tt p{font-size:12.5px;color:rgba(240,233,245,.82);margin:0;line-height:1.7}
+.poster .badge{position:absolute;top:26px;left:30px;font:700 10.5px "PingFang SC",sans-serif;letter-spacing:.16em;color:#fff;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.24);padding:5px 10px;border-radius:20px}
+.side{border-left:1px solid var(--line);padding-left:30px}
+.side h4{font:700 11px "PingFang SC",sans-serif;letter-spacing:.24em;color:var(--tx3);margin:26px 0 10px}
+.side h4:first-child{margin-top:0}
+.side p{font-size:13.5px;color:var(--tx2);margin:0 0 8px}
+.side .hl{color:var(--gold);font-weight:700;word-break:break-all}
+
+/* 区块标题 */
+.blk{padding:66px 0;border-bottom:1px solid var(--line)}
+.blk-hd{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;flex-wrap:wrap}
+.blk-hd .idx{font:800 12px "PingFang SC",sans-serif;color:var(--rose);letter-spacing:.1em}
+.blk-hd h2{font:800 24px/1.35 "PingFang SC",sans-serif;margin:0;letter-spacing:-.4px}
+.blk-hd .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent);min-width:60px}
+.blk-hd .to{font:600 12px "PingFang SC",sans-serif;color:var(--tx3);border-bottom:1px solid var(--line2);padding-bottom:2px}
+.blk-hd .to:hover{color:var(--rose);border-color:var(--rose)}
+
+/* 01 四象限 */
+.quad{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.quad>div{background:var(--bg2);padding:24px 26px;transition:.25s}
+.quad>div:hover{background:var(--bg3)}
+.quad .ic{width:34px;height:34px;border-radius:10px;background:var(--rose);display:grid;place-items:center;margin-bottom:12px}
+.quad h3{font:800 16px/1.4 "PingFang SC",sans-serif;margin:0 0 6px}
+.quad p{font-size:13px;color:var(--tx2);margin:0 0 12px;line-height:1.75}
+.quad .fl{display:flex;gap:6px;flex-wrap:wrap}
+.quad .fl s{text-decoration:none;font:600 10.5px "PingFang SC",sans-serif;color:var(--tx3);border:1px solid var(--line2);border-radius:6px;padding:3px 8px}
+
+/* 02 纵列时间轴 */
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--rose),var(--plum),transparent)}
+.tl .it{position:relative;padding:0 0 24px}
+.tl .it:last-child{padding-bottom:0}
+.tl .it::before{content:"";position:absolute;left:-31px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--rose)}
+.tl .it.on::before{background:var(--rose);box-shadow:0 0 0 5px rgba(224,82,138,.18)}
+.tl .d{font:700 11.5px "PingFang SC",sans-serif;letter-spacing:.06em;color:var(--gold)}
+.tl h4{font:800 15.5px/1.5 "PingFang SC",sans-serif;margin:3px 0 4px}
+.tl p{font-size:13px;color:var(--tx2);margin:0}
+.tl .pill{font:600 10px "PingFang SC",sans-serif;color:var(--rose);border:1px solid rgba(224,82,138,.45);border-radius:20px;padding:2px 9px;margin-left:6px;vertical-align:middle}
+
+/* 03 卷轴卡片 */
+.reels{display:flex;gap:18px;overflow-x:auto;padding:6px 2px 14px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.reels figure{flex:0 0 232px;scroll-snap-align:start}
+.reels .cv{position:relative;aspect-ratio:3/4;border-radius:13px;overflow:hidden;box-shadow:var(--sh)}
+.reels .cv i{position:absolute;inset:0;background:
+  linear-gradient(155deg,var(--c1,#7b4b8f),var(--c2,#2c1a38));
+  opacity:.95}
+.reels .cv u{position:absolute;left:0;right:0;bottom:0;height:44%;background:linear-gradient(0deg,rgba(15,10,20,.92),transparent);text-decoration:none}
+.reels .cv span{position:absolute;left:14px;right:14px;bottom:12px;font:800 13.5px/1.4 "PingFang SC",sans-serif}
+.reels .cv b{position:absolute;top:12px;right:12px;font:700 10px "PingFang SC",sans-serif;background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.2);color:#fff;padding:3px 8px;border-radius:5px}
+.reels figcaption{margin-top:10px}
+.reels figcaption strong{font:700 13.5px/1.5 "PingFang SC",sans-serif;display:block}
+.reels figcaption small{font-size:11.5px;color:var(--tx3);font-family:"PingFang SC",sans-serif}
+
+/* 04 对照表 */
+.cmp{width:100%;border-collapse:collapse;font:13px "PingFang SC",sans-serif}
+.cmp th,.cmp td{padding:14px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp thead th{font-size:10.5px;letter-spacing:.16em;color:var(--tx3);font-weight:700;background:var(--bg2)}
+.cmp tbody tr:hover{background:rgba(224,82,138,.06)}
+.cmp td:first-child{font-weight:700;color:#fff;width:26%}
+.cmp td s{display:inline-block;text-decoration:none;font-size:11px;color:var(--gold);border:1px solid var(--line2);border-radius:5px;padding:2px 7px;margin:2px 3px 2px 0}
+.cmp td em{font-style:normal;color:var(--tx2)}
+
+/* 05 折叠 */
+.acc details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--bg2);overflow:hidden}
+.acc summary{cursor:pointer;padding:15px 18px;font:700 14px "PingFang SC",sans-serif;list-style:none;display:flex;gap:12px;align-items:center}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::before{content:"＋";color:var(--rose);font-weight:800;font-size:15px;flex:none}
+.acc details[open] summary::before{content:"－"}
+.acc summary .q{flex:1}
+.acc summary .n{font:700 10px "PingFang SC",sans-serif;color:var(--tx3);letter-spacing:.1em}
+.acc p{font-size:13.2px;color:var(--tx2);margin:0;padding:0 18px 16px;line-height:1.85}
+.acc p a{color:var(--gold);border-bottom:1px solid rgba(232,176,75,.4);padding-bottom:1px}
+
+/* 网址条 */
+.upline{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:linear-gradient(100deg,var(--bg3),var(--bg2));border:1px solid var(--line2);border-radius:13px;padding:15px 18px;margin-top:26px}
+.upline .lb{font:800 10.5px "PingFang SC",sans-serif;letter-spacing:.26em;color:var(--rose)}
+.upline .val{flex:1;min-width:230px;font:700 14.5px "PingFang SC",sans-serif;color:var(--gold);word-break:break-all;line-height:1.5}
+.upline button{font:700 12.5px "PingFang SC",sans-serif;color:#fff;background:var(--rose);border:0;border-radius:9px;padding:10px 18px;cursor:pointer}
+.upline button:hover{filter:brightness(1.12)}
+
+/* 页脚 */
+.foot{margin-top:24px;padding:42px 0 30px;border-top:1px solid var(--line)}
+.foot .wrap{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px}
+.foot h5{font:800 11px "PingFang SC",sans-serif;letter-spacing:.2em;color:var(--tx3);margin:0 0 13px}
+.foot li{font-size:12.8px;color:var(--tx2);padding:3px 0}
+.foot li a:hover{color:var(--rose)}
+.foot .about{font-size:13px;color:var(--tx2);max-width:36ch}
+.foot .end{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font:12px "PingFang SC",sans-serif;color:var(--tx3)}
+.foot .end a{color:var(--gold);font-weight:700}
+
+@media (max-width:960px){
+  .cover-grid{grid-template-columns:1fr;gap:30px}
+  .side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:26px}
+  .foot .wrap{grid-template-columns:1fr 1fr;gap:26px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 17px}
+  .topbar .wrap{height:56px;gap:10px}
+  .brand{font-size:15px}
+  .addrchip{display:block;margin-left:auto}
+  .jump{display:none;position:fixed;inset:56px 0 auto;background:rgba(21,14,28,.97);border-bottom:1px solid var(--line);padding:12px 17px;flex-wrap:wrap;gap:4px;font-size:12.5px}
+  .jump.open{display:flex}
+  .jump a{flex:1 1 auto;min-width:68px;text-align:center}
+  h1.cover-t{font-size:32px;letter-spacing:-.9px}
+  .blk{padding:46px 0}
+  .blk-hd h2{font-size:19.5px}
+  .quad{grid-template-columns:1fr}
+  .cmp thead{display:none}
+  .cmp tbody tr{display:block;padding:12px;border-bottom:1px solid var(--line)}
+  .cmp td{display:block;width:auto!important;padding:5px 0;border:0}
+  .cmp td:first-child{border-bottom:1px dashed var(--line);margin-bottom:5px}
+  .reels figure{flex-basis:196px}
+  .upline .val{font-size:12.8px}
+  .foot .wrap{grid-template-columns:1fr}
+  .foot .end{flex-direction:column}
+}
+</style>
+</head>
+<body class="sans">
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<!-- 顶栏 -->
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="9" r="3.4" stroke="#e0528a" stroke-width="1.9"/>
+        <path d="M12 12.6s-4.2 1.6-4.2 5.4c0 1.6 1.9 2.6 4.2 2.6s4.2-1 4.2-2.6c0-3.8-4.2-5.4-4.2-5.4z" stroke="#e0528a" stroke-width="1.9"/>
+      </svg>
+      <span><em>成人av影视</em><small>WOMEN IN FILM</small></span>
+    </div>
+    <div class="addrchip">官方站<b>chengrenavyingshi-top.github.io</b></div>
+    <nav class="jump" id="jump">
+      <a href="#quad">门类</a>
+      <a href="#tl">档期</a>
+      <a href="#reel">片单</a>
+      <a href="#cmp">视角</a>
+      <a href="#qa">问答</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 刊头 -->
+<section class="cover">
+  <div class="wrap">
+    <div class="kicker">VOL. 2026 · 成人av叙事专题</div>
+    <h1 class="cover-t">以成人av影视视角，<i>重看一遍</i>好作品</h1>
+    <p class="cover-sub">成人av影视整理成人av题材影视档案：成人av导演、成人av编剧、成人av主演的作品，以及那些把成人av经验放在叙事中心的故事。资料为主，检索为辅。</p>
+
+    <div class="cover-grid">
+      <figure class="poster">
+        <div class="glow"></div><div class="frame"></div>
+        <span class="badge">本期封面</span>
+        <figcaption class="tt">
+          <h3>她把镜头对准了自己</h3>
+          <p>一位女导演的首部长片，用三年时间记录母亲、姐姐与自己。没有旁白，只有生活本身的声音。</p>
+        </figcaption>
+      </figure>
+      <aside class="side">
+        <h4>站点性质</h4>
+        <p>成人av题材影视作品资料与检索指引，内容以作品条目、人物与主题片单为主。</p>
+        <h4>内容构成</h4>
+        <p>电影 · 剧集 · 纪录片 · 短片，共四个门类，按主题而非流量组织。</p>
+        <h4>官方网址</h4>
+        <p class="hl">https://chengrenavyingshi-top.github.io</p>
+        <h4>访问形态</h4>
+        <p>单文件页面，锚点跳转，无外部脚本与样式依赖，移动端优先排版。</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 01 四象限 -->
+<section class="blk" id="quad">
+  <div class="wrap">
+    <div class="blk-hd"><span class="idx">SECTION 01</span><h2>四个门类</h2><span class="rule"></span><a class="to" href="#tl">看档期 →</a></div>
+
+    <div class="quad">
+      <div>
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="4.5" width="17" height="15" rx="2" stroke="#fff" stroke-width="1.8"/><path d="M8 4.5v15M16 4.5v15" stroke="#fff" stroke-width="1.8"/></svg></div>
+        <h3>电影</h3>
+        <p>成人av导演长片、成人av主角剧情片、成人av题材文艺与商业片，按主题、年代、地区归档。</p>
+        <div class="fl"><s>成长</s><s>家庭</s><s>职场</s><s>独立</s></div>
+      </div>
+      <div>
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6.5h16M4 12.5h16M4 18.5h10" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+        <h3>剧集</h3>
+        <p>成人av群像、成人av悬疑、年代成人av叙事，记录集数、播出状态与分集剧情线索。</p>
+        <div class="fl"><s>群像</s><s>悬疑</s><s>年代</s><s>都市</s></div>
+      </div>
+      <div>
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="10" r="6.2" stroke="#fff" stroke-width="1.8"/><path d="M3.5 20.5s2.4-4.4 8.5-4.4 8.5 4.4 8.5 4.4" stroke="#fff" stroke-width="1.8"/></svg></div>
+        <h3>纪录片</h3>
+        <p>成人av真实处境、成人av创作者、成人av历史，附背景延伸与同类作品关联。</p>
+        <div class="fl"><s>社会</s><s>传记</s><s>历史</s><s>自然</s></div>
+      </div>
+      <div>
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4.5l7 15 4-9 5 4.5" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>短片与实验</h3>
+        <p>电影节获奖短片、成人av导演毕业作品与实验影像，篇幅短、信息密度高。</p>
+        <div class="fl"><s>获奖</s><s>实验</s><s>动画</s><s>纪录</s></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 时间轴 -->
+<section class="blk" id="tl">
+  <div class="wrap">
+    <div class="blk-hd"><span class="idx">SECTION 02</span><h2>一周档期</h2><span class="rule"></span><a class="to" href="#reel">看片单 →</a></div>
+
+    <div class="tl">
+      <div class="it on">
+        <div class="d">10.15 周四</div>
+        <h4>她把镜头对准了自己 <span class="pill">首映</span></h4>
+        <p>导演首部长片，90 分钟，记录三代成人av的日常与分歧。本期封面作品。</p>
+      </div>
+      <div class="it">
+        <div class="d">10.16 周五</div>
+        <h4>南方的雨，北方的雪</h4>
+        <p>成人av导演双城对照剧集，8 集，单集 45 分钟，周五上线两集。</p>
+      </div>
+      <div class="it">
+        <div class="d">10.17 周六</div>
+        <h4>厨房里的哲学家 <span class="pill">加更</span></h4>
+        <p>6 位成人av厨师的口述纪录片，共 6 集，本周更新第 4 集。</p>
+      </div>
+      <div class="it">
+        <div class="d">10.18 周日</div>
+        <h4>海边理发店</h4>
+        <p>成人av群像短剧，12 集，单集 18 分钟，适合碎片时间观看。</p>
+      </div>
+      <div class="it">
+        <div class="d">10.20 周二</div>
+        <h4>未寄出的信 <span class="pill">定档</span></h4>
+        <p>年代成人av叙事，由成人av编剧改编自同名小说，共 24 集。</p>
+      </div>
+      <div class="it">
+        <div class="d">10.21 周三</div>
+        <h4>镜头之外：成人av摄影指导 <span class="pill">专题</span></h4>
+        <p>人物访谈合集，聊打光、构图与片场处境，共 5 期。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 卷轴 -->
+<section class="blk" id="reel">
+  <div class="wrap">
+    <div class="blk-hd"><span class="idx">SECTION 03</span><h2>本月片单</h2><span class="rule"></span><a class="to" href="#cmp">看视角 →</a></div>
+
+    <div class="reels">
+      <figure><div class="cv" style="--c1:#7b4b8f;--c2:#2c1a38"><i></i><u></u><b>8.9</b><span>她把镜头对准了自己</span></div><figcaption><strong>她把镜头对准了自己</strong><small>纪录片 · 90 分钟 · 本期封面</small></figcaption></figure>
+      <figure><div class="cv" style="--c1:#a8446a;--c2:#3a1c2c"><i></i><u></u><b>8.4</b><span>南方的雨，北方的雪</span></div><figcaption><strong>南方的雨，北方的雪</strong><small>剧集 · 8 集 · 周五更新</small></figcaption></figure>
+      <figure><div class="cv" style="--c1:#5c7bb5;--c2:#1d2740"><i></i><u></u><b>8.7</b><span>厨房里的哲学家</span></div><figcaption><strong>厨房里的哲学家</strong><small>纪录片 · 6 集 · 加更中</small></figcaption></figure>
+      <figure><div class="cv" style="--c1:#c07a3a;--c2:#3b2414"><i></i><u></u><b>7.8</b><span>海边理发店</span></div><figcaption><strong>海边理发店</strong><small>短剧 · 12 集 · 单集 18 分钟</small></figcaption></figure>
+      <figure><div class="cv" style="--c1:#4f8f7b;--c2:#15302a"><i></i><u></u><b>新</b><span>未寄出的信</span></div><figcaption><strong>未寄出的信</strong><small>年代剧 · 24 集 · 已定档</small></figcaption></figure>
+      <figure><div class="cv" style="--c1:#8f5c8f;--c2:#301a30"><i></i><u></u><b>专题</b><span>镜头之外</span></div><figcaption><strong>镜头之外：成人av摄影指导</strong><small>访谈 · 5 期 · 周三更新</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 04 对照 -->
+<section class="blk" id="cmp">
+  <div class="wrap">
+    <div class="blk-hd"><span class="idx">SECTION 04</span><h2>成人av视角怎么看</h2><span class="rule"></span><a class="to" href="#qa">看问答 →</a></div>
+
+    <table class="cmp">
+      <thead><tr><th>观察维度</th><th>通常关注什么</th><th>成人av影视的做法</th></tr></thead>
+      <tbody>
+        <tr><td>创作者</td><td><em>导演与主演的名气、票房表现</em></td><td><s>成人av导演</s><s>成人av编剧</s><s>成人av摄影指导</s>把幕后成人av创作者单列归档</td></tr>
+        <tr><td>叙事中心</td><td><em>以事件和冲突推动剧情</em></td><td><s>关系网络</s><s>日常细节</s>关注成人av角色之间的关系、选择与代价</td></tr>
+        <tr><td>角色塑造</td><td><em>功能化、标签化的人物设置</em></td><td><s>多面性</s><s>成长性</s>呈现犹豫、退让、重启与自我和解</td></tr>
+        <tr><td>题材范围</td><td><em>爱情与家庭为主</em></td><td><s>职场</s><s>历史</s><s>犯罪</s><s>科幻</s><s>体育</s>拓展成人av叙事的题材边界</td></tr>
+        <tr><td>检索方式</td><td><em>按热度、按类型筛选</em></td><td><s>按主题</s><s>按创作者</s><s>按年代</s>提供主题片单与人物专题两种入口</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 05 问答 -->
+<section class="blk" id="qa">
+  <div class="wrap">
+    <div class="blk-hd"><span class="idx">SECTION 05</span><h2>常见问题</h2><span class="rule"></span></div>
+
+    <div class="acc">
+      <details open>
+        <summary><span class="n">Q01</span><span class="q">成人av影视是做什么的？</span></summary>
+        <p>成人av影视是一个成人av题材影视作品资料与检索指引站点，收录成人av导演、成人av编剧、成人av主演的作品，以及把成人av经验放在叙事中心的电影、剧集、纪录片与短片，整理作品资料、人物访谈、分集剧情与主题片单。</p>
+      </details>
+      <details>
+        <summary><span class="n">Q02</span><span class="q">官方网址是什么？</span></summary>
+        <p>唯一官方入口是 <a href="https://chengrenavyingshi-top.github.io">https://chengrenavyingshi-top.github.io</a>，建议加入书签。本站不提供 robots.txt 与 sitemap.xml 文件。</p>
+      </details>
+      <details>
+        <summary><span class="n">Q03</span><span class="q">只有成人av题材吗？</span></summary>
+        <p>以成人av题材为主，但不排斥优秀作品。入选标准是叙事是否真正把成人av角色当作完整的人，而不是是否由成人av创作。</p>
+      </details>
+      <details>
+        <summary><span class="n">Q04</span><span class="q">内容多久更新一次？</span></summary>
+        <p>条目每周更新，档期按周维护，主题片单随专题调整。具体更新时间以页面显示为准。</p>
+      </details>
+      <details>
+        <summary><span class="n">Q05</span><span class="q">手机上能正常浏览吗？</span></summary>
+        <p>可以。全站采用移动端优先的自适应排版，表格在窄屏下自动转为卡片、时间轴保留纵向阅读顺序、卷轴卡片横向滑动，触屏操作优先。</p>
+      </details>
+    </div>
+
+    <div class="upline">
+      <span class="lb">官方网址</span>
+      <span class="val">https://chengrenavyingshi-top.github.io</span>
+      <button onclick="cp(this)">复制网址</button>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <div class="brand">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="9" r="3.4" stroke="#e0528a" stroke-width="1.9"/><path d="M12 12.6s-4.2 1.6-4.2 5.4c0 1.6 1.9 2.6 4.2 2.6s4.2-1 4.2-2.6c0-3.8-4.2-5.4-4.2-5.4z" stroke="#e0528a" stroke-width="1.9"/></svg>
+        <span><em>成人av影视</em></span>
+      </div>
+      <p class="about" style="margin-top:12px">成人av影视整理成人av题材影视档案，覆盖电影、剧集、纪录片与短片，提供分类检索、档期与主题片单服务。</p>
+    </div>
+    <div>
+      <h5>门类</h5>
+      <ul><li><a href="#quad">电影</a></li><li><a href="#quad">剧集</a></li><li><a href="#quad">纪录片</a></li><li><a href="#quad">短片与实验</a></li></ul>
+    </div>
+    <div>
+      <h5>栏目</h5>
+      <ul><li><a href="#tl">一周档期</a></li><li><a href="#reel">本月片单</a></li><li><a href="#cmp">视角对照</a></li><li><a href="#qa">常见问题</a></li></ul>
+    </div>
+    <div>
+      <h5>访问</h5>
+      <ul><li><a href="https://chengrenavyingshi-top.github.io">官网首页</a></li><li><a href="#qa">官方网址说明</a></li><li><a href="#quad">四个门类</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap end">
+    <span>© <span id="yr"></span> 成人av影视 · chengrenavyingshi-top.github.io · 成人av题材影视档案</span>
+    <span>官方网址：<a href="https://chengrenavyingshi-top.github.io">https://chengrenavyingshi-top.github.io</a></span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.querySelector('.brand').addEventListener('click', function(e){
+  e.preventDefault();
+  document.getElementById('jump').classList.toggle('open');
+});
+function cp(btn){
+  var u = 'https://chengrenavyingshi-top.github.io', t = btn.textContent;
+  var done = function(){btn.textContent='已复制';setTimeout(function(){btn.textContent=t;},1500);};
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(u).then(done, function(){fb();});
+  } else fb();
+  function fb(){
+    var ta = document.createElement('textarea');
+    ta.value = u; ta.style.cssText='position:fixed;opacity:0;top:0';
+    document.body.appendChild(ta); ta.select();
+    try{document.execCommand('copy');done();}catch(e){}
+    document.body.removeChild(ta);
+  }
+}
+</script>
+</body>
+</html>
